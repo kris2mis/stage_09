@@ -9,7 +9,7 @@ def same_digits(number):
         if number != 0:
             digit_2 = number % 10
             if digit_1 == digit_2:
-                number = number = number // 10
+                number = number // 10
         else:
             break
 

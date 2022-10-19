@@ -1,12 +1,15 @@
 # сколько раз цифра встречается в заданом числе
 
+DIGIT = 1
+
 def count_digit(number):
-    digit = 0
+    number *= -1 if number < 0 else 1
+    digit = DIGIT
     count = 0
     while number > 0:
         digit = number % 10
         number = number // 10
-        if digit == 0:
+        if digit == DIGIT:
             count += 1
     return count
 

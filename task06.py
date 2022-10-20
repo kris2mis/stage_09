@@ -5,28 +5,28 @@
 # вклада превысит 2000 руб., и вывести найденное количество месяцев K (целое
 # число) и итоговый размер вклада S (вещественное число).
 
-def calc_finish_capital(p):
+def calc_month(p):
     start_capital = 1000
-    capital_limit = 2000
     k = 1
+    s = 1
     while start_capital < 2000:
-        S = start_capital * (1 + p / 100)
-        k += 1
-        month = int(S // 30)
-        break
-    return S, k, month
+        s = start_capital + start_capital * (p / 100) * k
+        if s < 2000 and 0 < p < 25:
+            k += 1
+        else:
+            break
+
+    return k
 
 
 def main():
     p = float(input("Input the percent: "))
+    start_capital = 1000
 
-    finish_capilal = calc_finish_capital(p)
-    k = calc_finish_capital(p)
-    month = calc_finish_capital(p)
+    month = calc_month(p)
+    s = start_capital + start_capital * (p / 100) * month
 
-    msg = f"Finish capilal is {finish_capilal}. " \
-          f"Count of month - {k} " \
-          f"The summa will be 2000 in {month} month."
+    msg = f"Finish capilal is {s}.\nCount of month: {month} "
 
     print(msg)
 

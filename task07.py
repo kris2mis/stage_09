@@ -3,6 +3,7 @@
 # числе 18273645 максимальная цифра восемь, а в числе 777 – семь
 
 def find_max_digit(number):
+    number *= -1 if number < 0 else 1
     max_digit = 0
     while number > 0:
         digit = number % 10

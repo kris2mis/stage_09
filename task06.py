@@ -7,8 +7,8 @@
 
 def calc_month(p):
     start_capital = 1000
-    k = 1
-    s = 1
+    k = 1  # количество месяцев
+    s = 0  # итоговый размер вклада
     while start_capital < 2000:
         s = start_capital + start_capital * (p / 100) * k
         if s < 2000 and 0 < p < 25:

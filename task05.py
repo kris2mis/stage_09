@@ -6,13 +6,9 @@
 
 def check_palindrome(number):
     number_test = number[::-1]
-    if number == number_test:
-        result = True
-    else:
-        result = False
-    return result
-
-
+    return number == number_test
+   
+    
 def main():
     number = str(input("Input your number: "))
 

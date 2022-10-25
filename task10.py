@@ -9,8 +9,6 @@ def count_even_digits(number):
         number = number // 10
         if digit % 2 == 0:
             count += 1
-        else:
-            count += 0
 
     return count
 
